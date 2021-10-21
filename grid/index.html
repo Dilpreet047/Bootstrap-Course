@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!-- col-md-8 will occupy full width in mobile display
+             But in desktop display col-md-8 will occupy 8 columns width and 
+             col-md-4 will occupy 4 columns width.
+             8 + 4 = 12
+        -->
+        <div class="row">
+            <div class="col-md-8">.col-md-8</div>
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- In mobile display all three columns will occupy 6 columns width due 
+             due to which third column will get wrapped up to the next line.
+             But in desktop display all columns will occupy 4 columns width.
+             4 + 4 + 4 = 12 
+        -->
+        <div class="row">
+            <div class="col-6 col-md-4">
+                .col-6 col-md-4
+            </div>
+            <div class="col-6 col-md-4">
+                .col-6 col-md-4
+            </div>
+            <div class="col-6 col-md-4">
+                .col-6 col-md-4
+            </div>
+        </div>
+
+        <!-- In mobile and desktop display both the columns will occupy 50% of the sapce i.e 6 
+             columns
+        -->
+        <div class="row">
+            <div class="col-6">
+                .col-6
+            </div>
+            <div class="col-6">
+                .col-6
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

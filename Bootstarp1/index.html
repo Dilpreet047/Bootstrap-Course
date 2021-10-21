@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-success">
+            <div class="col-6 border">
+                <h1 class="pb-2 mt-4 mb-2">
+                    Item Lister
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 border p-4 mt-4">
+                
+                <p class="lead">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci nesciunt quae, aut, distinctio architecto nostrum nobis impedit voluptatibus cumque possimus nemo, repellat est! Amet id enim eos reprehenderit obcaecati veritatis? Lorem ipsum dolor, sit amet consectetur adipisicing elit.     
+                </p>
+                
+                <p class="text-justify">
+                    <mark>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, earum.</mark> Sapiente commodi provident unde voluptates blanditiis repellendus nobis? Ipsa nihil ipsum modi odit totam earum accusamus illo temporibus, voluptatem sapiente at deleniti.
+                </p>
+            </div>
+            <div class="col-4 border p-4 mt-4">
+                <p class="text-justify text-info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, ea culpa eaque voluptatum esse earum nesciunt omnis maxime tempore quasi magnam placeat quam delectus autem libero neque in atque quos!
+                </p>
+            </div>
+        </div>
+        
+        <!--
+            The float is used to align different text in the same line.
+
+            We need to clear the float after using it otherwise all the new element 
+            will be placed on the same line.
+        -->
+        <div class="row">
+            <div class="col border mt-4">
+                <div class="float-left">Text to the left.</div>
+                <div class="float-right">Text to the right.</div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col border mt-4">
+                <ul class="list-unstyled">
+                    <li>
+                        Item 1
+                    </li>
+                    <li>
+                        Item 2
+                    </li>
+                    <li>
+                        Item 3
+                    </li>
+                    <li>
+                        Item 4
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col border mt-4">
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">
+                        Item 1
+                    </li>
+                    <li class="list-group-item">
+                        Item 2
+                    </li>
+                    <li class="list-group-item">
+                        Item 3
+                    </li>
+                    <li class="list-group-item">
+                        Item 4
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col border">
+                <ul class="list-unstyled">
+                    <li class="text-primary">
+                        Item 1
+                    </li>
+                    <li class="text-danger">
+                        Item 2
+                    </li>
+                    <li class="text-info">
+                        Item 3
+                    </li>
+                    <li class="text-success">
+                        Item 4
+                    </li>
+                    <li class="text-warning">
+                        Item 5
+                    </li>
+                    <li class="text-muted">
+                        Item 5
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-4 mb-4">
+            <div class="col border bg-success">Column 1</div>
+            <div class="col border bg-danger">Column 2</div>
+            <div class="col border bg-warning">Column 3</div>
+            <div class="col border bg-muted">Column 4</div>
+            <div class="col border bg-primary">Column 5</div>
+            <div class="col border bg-info">Column 6</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col border">
+                <button class="btn btn-block bg-danger">Button</button>
+            </div>
+            
+            <div class="col border">
+                <a href="#" class="btn btn-block bg-success">Link</a>
+            </div>
+
+            <div class="col border">
+                <input type="submit" class="btn btn-block bg-primary" value="Input">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-light">Light</button>
+            <button class="btn btn-dark">Dark</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-link">Link</button>
+        </div>
+
+        <!--
+            Forms
+        -->
+        <div class="row mt-4">
+            <div class="col-6 border">
+                <form>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" value="Name" placeholder="Name" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="email" value="Email" placeholder="Email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Comments</label>
+                        <textarea placeholder="Comments" class="form-control">Comments</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select class="form-control">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>File</label>
+                        <input type="file" class="form-control-file">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-6 border">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" value="Name" placeholder="Name" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="email" value="Email" placeholder="Email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Comments</label>
+                        <textarea placeholder="Comments" class="form-control">Comments</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select class="form-control">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>File</label>
+                        <input type="file" class="form-control-file">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
