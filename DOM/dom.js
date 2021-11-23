@@ -112,3 +112,54 @@ for (let index = 0; index < odd.length; index++) {
     even[index].style.backgroundColor = "#ccc";
 }
 
+
+//getting the parent of an element
+//parent of ul
+var items = document.querySelector("#items");
+console.log(items.parentNode);
+items.parentNode.style.backgroundColor = "#f4f4f4";
+console.log(items.parentNode.parentNode.parentNode.parentNode.parentNode);
+
+//parentElement
+//parentElement and parentNode are same for the most of the part
+var items = document.querySelector("#items");
+console.log(items.parentElement);
+items.parentElement.style.backgroundColor = "#f4f4f4";
+console.log(items.parentNode.parentNode.parentNode.parentNode.parentNode);
+
+//previousSibling
+//nextSibling
+
+//creating new DOM element from JS
+var newDiv = document.createElement('div');
+//adding ID to the above new element
+newDiv.id = "hello1";
+
+
+//adding class to the above new element
+newDiv.className = "hello";
+
+//adding attributes
+newDiv.setAttribute("title", "new element");
+
+//adding content in newDiv
+//creating text node
+var text = document.createTextNode('Hello World');
+newDiv.appendChild(text);
+
+//inserting new element into dom
+var container = document.querySelector("header .container")
+var h1 = document.querySelector("header h1");
+
+container.insertBefore(newDiv, h1);
+
+console.log(newDiv);
+
+
+
+
+
+
+
+
+
