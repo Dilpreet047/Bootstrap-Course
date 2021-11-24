@@ -155,11 +155,97 @@ container.insertBefore(newDiv, h1);
 
 console.log(newDiv);
 
+//Events
+
+/**
+  this is an old way of event handling
+
+  function buttonClick(){
+
+    console.log("Button Clicked");
+
+}
+*/
+
+//Using event listener
+var button = document.querySelector('#btn-id').addEventListener('click', (e) => {
+    console.log("Button Clicked");
+
+    //printing output on the DOM
+
+    var newDiv = document.querySelector('#new-div');
+    newDiv.innerHTML = `<h3>${e.target.id}</h3>`;
+    // newDiv.innerText = 'hello';
+
+    //getting the position of the cursor
+    console.log(`X = ${e.clientX}`);
+    console.log(`Y = ${e.clientY}`);
+
+    //client is with respect to browser
+    //offset is with respect to actual element
+
+    //to know which key was pressed when button was clicked
+    //use event.altKey, event.ctrlKey, event.shiftKey
+});
+
+//event types
+var button2 = document.querySelector('#btn-id1');
+button2.addEventListener('click', (e) => {
+    button2.innerText = 'EVENT TYPE : '+e.type;
+})
+
+button2.addEventListener('dblclick', (e) => {
+    button2.innerText = 'EVENT TYPE : '+e.type;
+})
+
+button2.addEventListener('mouseup', (e) => {
+    button2.innerText = 'EVENT TYPE : '+e.type;
+})
+
+button2.addEventListener('mousedown', (e) => {
+    button2.innerText = 'EVENT TYPE : '+e.type;
+})
 
 
+//tracking mouse
+var box = document.querySelector('#box');
+box.addEventListener('mouseenter', (e) => {
+    box.style.backgroundColor = 'crimson';
+})
+
+box.addEventListener('mouseleave', (e) => {
+    box.style.backgroundColor = 'grey';
+    box.innerText = '';
+})
+
+/**
+  In the same way we can use the mouseover and mouseout
+
+  Difference is mouseenter and mouseleave will be only for the parent element
+  BUt mouseover and mouseout will be for any nested elemtn too.
+ */
+
+//getting the coordinates on moving mouse
+
+box.addEventListener('mousemove', (e) => {
+
+    box.innerText = `MouseX = ${e.offsetX} MouseY = ${e.offsetY}`;
+    document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY}, ${e.offsetX - e.offsetY})`;
+})
 
 
+//listening to the input events
+var input = document.querySelector('.input');
+var form = document.querySelector('form');
 
+//detecting input from the keyboard
+//other types blur, focus, keyup, keypress
+input.addEventListener('keydown', (e) => {
+    //console.log(e.target.value);
 
+    box.innerText = e.target.value;
+})
+
+//same way other events can also be handled
 
 
